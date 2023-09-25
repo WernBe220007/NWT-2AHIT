@@ -1,0 +1,675 @@
+<project title="hausplan" version="0.80">
+    <properties>
+        <property show="1" name="saveddate-us">2022-12-21</property>
+        <property show="1" name="savedtime">17:13</property>
+        <property show="1" name="savedfilepath">/home/benedikt/Documents/schule/NWT/hausplan.qet</property>
+        <property show="1" name="savedfilename">hausplan</property>
+        <property show="1" name="saveddate">21.12.22</property>
+        <property show="1" name="saveddate-eu">21-12-2022</property>
+    </properties>
+    <newdiagrams>
+        <border colsize="60" displaycols="true" rows="8" cols="17" rowsize="80" displayrows="true"/>
+        <inset title="" plant="" date="null" auto_page_num="" displayAt="bottom" version="" filename="" folio="%id/%total" indexrev="" author="" locmach=""/>
+        <conductors numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" condsize="1" bicolor="false" conductor_section="" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" onetextperfolio="0" vertical-alignment="AlignRight" dash-size="2" num="_" function="" vertirotatetext="270" color2="#000000" cable=""/>
+        <report label="%f-%l%c"/>
+        <xrefs>
+            <xref xrefpos="AlignTop" snapto="label" offset="40" type="coil" displayhas="cross" switchprefix="" master_label="%f-%l%c" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" powerprefix=""/>
+            <xref xrefpos="" snapto="label" offset="0" type="commutator" displayhas="cross" switchprefix="" master_label="%f-%l%c" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" powerprefix=""/>
+            <xref xrefpos="" snapto="label" offset="0" type="protection" displayhas="cross" switchprefix="" master_label="%f-%l%c" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" powerprefix=""/>
+        </xrefs>
+        <conductors_autonums freeze_new_conductors="false" current_autonum=""/>
+        <folio_autonums/>
+        <element_autonums current_autonum="" freeze_new_elements="false"/>
+    </newdiagrams>
+    <diagram title="Hausplan" rowsize="80" freezeNewConductor="false" height="660" version="0.80" displayrows="true" indexrev="" folio="%id/%total" cols="17" freezeNewElement="false" auto_page_num="Create an auto folio numbering" date="20221221" plant="" locmach="" displaycols="true" displayAt="bottom" filename="hausplan.qet" order="1" rows="8" colsize="60" author="Benedikt Werner">
+        <defaultconductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" condsize="1" bicolor="false" conductor_section="" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" vertirotatetext="270" color2="#000000" cable=""/>
+        <elements>
+            <element y="140" type="embed://import/Network/Nodes/wlan-1.elmt" x="260" orientation="1" prefix="" freezeLabel="false" uuid="{2f55c116-e04d-47b4-ac74-ea1b697ddc93}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="0"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="formula"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="270" text_from="ElementInfo" uuid="{c1051077-85b0-4e52-8504-f32764bdbd95}">
+                        <text></text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="140" type="embed://import/Network/Nodes/nat.elmt" x="170" orientation="0" prefix="" freezeLabel="false" uuid="{b02755b3-c16b-4bb5-bb58-64fd73ae5b50}" z="10">
+                <terminals>
+                    <terminal y="0" nameHidden="0" x="-26" orientation="3" number="_" name="_" id="1"/>
+                    <terminal y="0" nameHidden="0" x="26" orientation="1" number="_" name="_" id="2"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="formula"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="0" x="20" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{a8df8fe7-76ec-4de1-9d26-8455089e94be}">
+                        <text></text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="140" type="embed://import/Network/Hosts/client-4.elmt" x="330" orientation="0" prefix="" freezeLabel="false" uuid="{34ce190e-03d7-4404-aca0-c61b80a44eb4}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="3"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="manufacturer">HP</elementInformation>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Laserdrucker</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-40" x="-30" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{e7156537-e6e6-4925-973b-0f3f267b4da4}">
+                        <text>Laserdrucker</text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="140" type="embed://import/Network/Cabling/lan-1.elmt" x="60" orientation="0" prefix="" freezeLabel="false" uuid="{5f486584-3a56-4a23-850c-250c1d1f9080}" z="10">
+                <terminals>
+                    <terminal y="0" nameHidden="0" x="5" orientation="1" number="_" name="_" id="4"/>
+                </terminals>
+                <inputs/>
+                <dynamic_texts/>
+                <texts_groups/>
+            </element>
+            <element y="230" type="embed://import/Network/Hosts/client-3.elmt" x="570" orientation="0" prefix="" freezeLabel="false" uuid="{09cac573-f751-4c41-8107-5b88861db0a7}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="5"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="manufacturer">DIY</elementInformation>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">PC</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-13" x="-4" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{80d250e8-6906-40e6-a7e4-8c49aeacaf1a}">
+                        <text></text>
+                        <info_name>function</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="100" type="embed://import/Network/Nodes/switch.elmt" x="220" orientation="0" prefix="" freezeLabel="false" uuid="{03550899-206e-4221-9051-919d4363e05b}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="6"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="formula"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{2bf592f8-74e4-4825-a7ff-06c0a78c75f2}">
+                        <text></text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="220" type="embed://import/Network/Nodes/switch.elmt" x="660" orientation="0" prefix="" freezeLabel="false" uuid="{8df278dd-8430-4ea5-87c6-bf90eabe4a8d}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="7"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="manufacturer">HP</elementInformation>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Bastelswitch</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{d38bdb88-0465-4df5-b631-c4331679cc5b}">
+                        <text>Bastelswitch</text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="140" type="embed://import/Network/Nodes/switch.elmt" x="610" orientation="0" prefix="" freezeLabel="false" uuid="{9bdaddc6-9f8c-40a6-ae6d-2df7d4581907}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="8"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">1GIG Switch</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{cdb58334-5d0b-4445-a9ae-0dc6f4454aff}">
+                        <text>1GIG Switch</text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="140" type="embed://import/Network/Hosts/client-5.elmt" x="400" orientation="0" prefix="" freezeLabel="false" uuid="{ea779471-baeb-4074-9177-5f7707f2f62b}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="9"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="manufacturer">HP</elementInformation>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Homeserver</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-60" x="-30" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Valignment="AlignVCenter" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{890a6ca4-c691-4abe-a03e-9ee6fa9559e5}">
+                        <text>Homeserver</text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="140" type="embed://import/Network/Nodes/firewall-1.elmt" x="110" orientation="0" prefix="" freezeLabel="false" uuid="{92749fd4-aa10-4694-b70c-6c1a847dfef6}" z="10">
+                <terminals>
+                    <terminal y="0" nameHidden="0" x="-26" orientation="3" number="_" name="_" id="10"/>
+                    <terminal y="0" nameHidden="0" x="26" orientation="1" number="_" name="_" id="11"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="formula"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="0" x="20" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{695c4231-6a94-4c4e-a49f-a6e8dd144210}">
+                        <text></text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="260" type="embed://import/Network/Nodes/switch.elmt" x="180" orientation="0" prefix="" freezeLabel="false" uuid="{a5ec21b1-297f-4d4a-bef9-7df6605b38e7}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="12"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="formula"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{ae1fb645-a180-4db1-a856-739f434f1cac}">
+                        <text></text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="280" type="embed://import/Network/Hosts/client-1.elmt" x="710" orientation="0" prefix="" freezeLabel="false" uuid="{464ada4e-07e3-487d-b60d-23f89dd76aee}" z="10">
+                <terminals>
+                    <terminal y="16" nameHidden="0" x="0" orientation="2" number="_" name="_" id="13"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">TestPI</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{4ccc2d1a-e3b8-456e-8276-05ad68c4a082}">
+                        <text>TestPI</text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="50" type="embed://import/Network/Hosts/client-2.elmt" x="340" orientation="0" prefix="" freezeLabel="false" uuid="{a317fab7-7e5f-4c6b-b4b2-ec2628e8a1da}" z="10">
+                <terminals/>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="manufacturer">Asus</elementInformation>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Laptop</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-13" x="-4" font="Sans Serif,7,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{58a42324-194f-4164-8847-43b5099d923f}">
+                        <text></text>
+                        <info_name>function</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="50" type="embed://import/Network/Hosts/client-2.elmt" x="410" orientation="0" prefix="" freezeLabel="false" uuid="{c8058f30-4205-4803-bfab-5aace9250ef1}" z="10">
+                <terminals/>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Papa Laptop</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-13" x="-4" font="Sans Serif,7,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{9860fed2-fe45-4823-9d88-989962032cd8}">
+                        <text></text>
+                        <info_name>function</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="260" type="embed://import/Network/Nodes/wlan-1.elmt" x="120" orientation="0" prefix="" freezeLabel="false" uuid="{73282eeb-0c2f-488f-bb42-307763d3b1e5}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="14"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="formula"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{1e189937-e384-4ea4-9134-e648883c7035}">
+                        <text></text>
+                        <info_name>description</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="360" type="embed://import/Network/Hosts/client-3.elmt" x="230" orientation="0" prefix="" freezeLabel="false" uuid="{7d195bca-704f-4287-843d-12796596faca}" z="10">
+                <terminals>
+                    <terminal y="26" nameHidden="0" x="0" orientation="2" number="_" name="_" id="15"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Oma Opa PC</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-13" x="-4" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{e0b3bef3-12a8-4eb7-8b8f-1a68a8de7c9f}">
+                        <text></text>
+                        <info_name>function</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="310" type="embed://import/Network/Hosts/client-2.elmt" x="270" orientation="0" prefix="" freezeLabel="false" uuid="{f835a293-0cc0-4ea8-848e-3b51ca99a467}" z="10">
+                <terminals/>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation show="1" name="label"></elementInformation>
+                    <elementInformation show="1" name="description">Oma Opa Laptop</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text keep_visual_rotation="true" text_width="-1" y="-13" x="-4" font="Sans Serif,7,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{b9b4b39a-47a9-40fc-bf67-b28c87de7bdd}">
+                        <text></text>
+                        <info_name>function</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+        </elements>
+        <conductors>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="2" condsize="1" bicolor="false" conductor_section="" terminal1="0" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="11" condsize="1" bicolor="false" conductor_section="" terminal1="1" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="7" condsize="1" bicolor="false" conductor_section="" terminal1="8" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="2" condsize="1" bicolor="false" conductor_section="" terminal1="6" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="4" condsize="1" bicolor="false" conductor_section="" terminal1="10" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="12" condsize="1" bicolor="false" conductor_section="" terminal1="6" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="14" condsize="1" bicolor="false" conductor_section="" terminal1="12" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="5" condsize="1" bicolor="false" conductor_section="" terminal1="8" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="8" condsize="1" bicolor="false" conductor_section="" terminal1="6" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="9" condsize="1" bicolor="false" conductor_section="" terminal1="6" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="3" condsize="1" bicolor="false" conductor_section="" terminal1="6" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="13" condsize="1" bicolor="false" conductor_section="" terminal1="7" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor numsize="7" type="multi" bus="" horizrotatetext="0" tension_protocol="" displaytext="1" terminal2="15" condsize="1" bicolor="false" conductor_section="" terminal1="12" formula="" text_color="#000000" conductor_color="" horizontal-alignment="AlignBottom" vertical-alignment="AlignRight" onetextperfolio="0" dash-size="2" num="_" function="" y="0" vertirotatetext="270" x="0" color2="#000000" cable="" freezeLabel="false">
+                <sequentialNumbers/>
+            </conductor>
+        </conductors>
+        <inputs>
+            <input text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:0; font-style:normal;&quot;>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>TP Link Archer A7&lt;/p>&lt;/body>&lt;/html>" y="310" x="110" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" rotation="0"/>
+            <input text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:0; font-style:normal;&quot;>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Arris ISP Modem&lt;/p>&lt;/body>&lt;/html>" y="180" x="70" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" rotation="0"/>
+        </inputs>
+        <shapes>
+            <shape y2="170" rx="0" type="Rectangle" is_movable="1" x1="80" y1="60" z="0" x2="300" ry="0" closed="0">
+                <pen widthF="1" style="SolidLine" color="#000000"/>
+                <brush style="NoBrush" color="#000000"/>
+            </shape>
+            <shape y2="310" rx="0" type="Rectangle" is_movable="1" x1="90" y1="220" z="0" x2="230" ry="0" closed="0">
+                <pen widthF="1" style="SolidLine" color="#000000"/>
+                <brush style="NoBrush" color="#000000"/>
+            </shape>
+        </shapes>
+    </diagram>
+    <collection>
+        <category name="import">
+            <names>
+                <name lang="da">Importerede elementer</name>
+                <name lang="pt">elementos importados</name>
+                <name lang="de">Importierte elemente</name>
+                <name lang="nl">Elementen geïmporteerd</name>
+                <name lang="ca">Elements importats</name>
+                <name lang="fr">Éléments importés</name>
+                <name lang="es">Elementos importados</name>
+                <name lang="it">Elementi importati</name>
+                <name lang="el">Εισηγμένα στοιχεία</name>
+                <name lang="sl">Uvoženi elementi</name>
+                <name lang="en">Imported elements</name>
+                <name lang="hr">Uvezeni elementi</name>
+                <name lang="cs">Zavedené prvky</name>
+                <name lang="ro">Elemente importate</name>
+                <name lang="tr">İthal öğeler</name>
+                <name lang="pl">Elementy importowane</name>
+                <name lang="ru">Импортированные элементы</name>
+            </names>
+            <category name="Network">
+                <names>
+                    <name lang="de">Network</name>
+                    <name lang="nl">Network</name>
+                    <name lang="fr">Network</name>
+                    <name lang="es">Network</name>
+                    <name lang="it">Network</name>
+                    <name lang="el">Network</name>
+                    <name lang="en">Network</name>
+                    <name lang="cs">Network</name>
+                    <name lang="pl">Network</name>
+                    <name lang="ar">Network</name>
+                    <name lang="ru">Network</name>
+                </names>
+                <category name="Cabling">
+                    <names>
+                        <name lang="de">Cabling</name>
+                        <name lang="nl">Cabling</name>
+                        <name lang="fr">Cabling</name>
+                        <name lang="es">Cabling</name>
+                        <name lang="it">Cabling</name>
+                        <name lang="el">Cabling</name>
+                        <name lang="en">Cabling</name>
+                        <name lang="cs">Cabling</name>
+                        <name lang="pl">Cabling</name>
+                        <name lang="ar">Cabling</name>
+                        <name lang="ru">Cabling</name>
+                    </names>
+                    <element name="lan-1.elmt">
+                        <definition link_type="previous_report" hotspot_x="33" hotspot_y="24" type="element" orientation="dyyy" version="0.70" width="50" height="50">
+                            <uuid uuid="{74c543ae-597a-425c-b934-7ffc1273cd80}"/>
+                            <names>
+                                <name lang="en">wan</name>
+                            </names>
+                            <informations/>
+                            <description>
+                                <text text="WAN" y="18" x="-13" font="Sans Serif,10,-1,5,50,0,0,0,0,0" rotation="270" color="#000000"/>
+                                <line y2="0" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-10" end2="none" y1="0" x2="9" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="10" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-10" end2="none" y1="-10" x2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <terminal y="0" x="9" orientation="e"/>
+                            </description>
+                        </definition>
+                    </element>
+                </category>
+                <category name="Nodes">
+                    <names>
+                        <name lang="de">Nodes</name>
+                        <name lang="nl">Nodes</name>
+                        <name lang="fr">Nodes</name>
+                        <name lang="es">Nodes</name>
+                        <name lang="it">Nodes</name>
+                        <name lang="el">Nodes</name>
+                        <name lang="en">Nodes</name>
+                        <name lang="cs">Nodes</name>
+                        <name lang="pl">Nodes</name>
+                        <name lang="ar">Nodes</name>
+                        <name lang="ru">Nodes</name>
+                    </names>
+                    <element name="firewall-1.elmt">
+                        <definition link_type="simple" hotspot_y="44" hotspot_x="34" type="element" orientation="dyyy" version="0.70" width="70" height="70">
+                            <uuid uuid="{bfef4e4d-e475-40ff-b344-8916c4c6b04a}"/>
+                            <names>
+                                <name lang="en">firewall</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <circle antialias="false" y="-20" x="-20" diameter="40" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="0" Valignment="AlignBottom" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="20" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" z="2" uuid="{9fbe3f26-2c77-44bc-ac6c-bf908125553b}">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <text text="Firewall" y="-24" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-22" rotation="0" color="#000000"/>
+                                <line y2="0" antialias="false" length1="1.5" length2="1.5" end1="none" x1="-20" end2="none" y1="0" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-30"/>
+                                <line y2="0" antialias="false" length1="1.5" length2="1.5" end1="none" x1="20" end2="none" y1="0" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="30"/>
+                                <rect antialias="false" rx="0" y="-15" x="-5" width="10" height="30" style="line-style:normal;line-weight:normal;filling:none;color:black" ry="0"/>
+                                <terminal y="0" x="30" orientation="e"/>
+                                <terminal y="0" x="-30" orientation="w"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="nat.elmt">
+                        <definition link_type="simple" hotspot_y="44" hotspot_x="34" type="element" orientation="dyyy" version="0.70" width="70" height="70">
+                            <uuid uuid="{99bf7efb-7f09-4ad6-84e0-44cfe98bec9a}"/>
+                            <names>
+                                <name lang="en">nat</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <circle antialias="false" y="-20" x="-20" diameter="40" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="0" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-30" end2="none" y1="0" x2="-20" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="0" antialias="false" length1="1.5" end1="none" length2="1.5" x1="20" end2="none" y1="0" x2="30" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="0" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-16" end2="none" y1="0" x2="16" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="0" Valignment="AlignBottom" x="20" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" z="5" uuid="{29c86d1e-5f6f-4bb1-b3bd-c0b86ed0b8b3}">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <text text="NAT" y="-24" x="-12" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rotation="0" color="#000000"/>
+                                <terminal y="0" x="-30" orientation="w"/>
+                                <terminal y="0" x="30" orientation="e"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="switch.elmt">
+                        <definition link_type="simple" hotspot_y="43" hotspot_x="24" type="element" orientation="dyyy" version="0.70" width="50" height="80">
+                            <uuid uuid="{3768ebad-4d0f-4258-b201-a201f49bbecc}"/>
+                            <names>
+                                <name lang="en">switch</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <circle antialias="false" y="-20" x="-20" diameter="40" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="5" Valignment="AlignBottom" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" z="2" uuid="{a3164a10-759c-4e25-91b9-0f1922c728b0}">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <text text="Switch" y="-24" x="-21" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rotation="0" color="#000000"/>
+                                <line y2="10" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-10" end2="none" y1="-10" x2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="10" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="-10" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="10" antialias="false" length1="1.5" end1="none" length2="1.5" x1="10" end2="none" y1="-10" x2="10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="30" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="20" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <terminal y="30" x="0" orientation="s"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="wlan-1.elmt">
+                        <definition link_type="simple" hotspot_x="25" hotspot_y="42" type="element" orientation="dyyy" version="0.70" width="50" height="80">
+                            <uuid uuid="{9dd8bc3a-9e7f-4dc5-9614-b8f0327718e8}"/>
+                            <names>
+                                <name lang="en">wlan</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <circle antialias="false" y="-20" x="-20" diameter="40" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{b3d41a27-973e-4406-9c5a-e459c9e6a99b}" z="2">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <text text="AP" y="-24" x="-7" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rotation="0" color="#000000"/>
+                                <line y2="30" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="20" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <arc angle="90" antialias="true" y="-10" x="0" width="10" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" start="180"/>
+                                <arc angle="90" antialias="true" y="-15" x="-5" width="20" height="20" style="line-style:normal;line-weight:normal;filling:none;color:black" start="180"/>
+                                <arc angle="90" antialias="true" y="-20" x="-10" width="30" height="30" style="line-style:normal;line-weight:normal;filling:none;color:black" start="180"/>
+                                <terminal y="30" x="0" orientation="s"/>
+                            </description>
+                        </definition>
+                    </element>
+                </category>
+                <category name="Hosts">
+                    <names>
+                        <name lang="de">Hosts</name>
+                        <name lang="nl">Hosts</name>
+                        <name lang="fr">Hosts</name>
+                        <name lang="es">Hosts</name>
+                        <name lang="it">Hosts</name>
+                        <name lang="el">Hosts</name>
+                        <name lang="en">Hosts</name>
+                        <name lang="cs">Hosts</name>
+                        <name lang="pl">Hosts</name>
+                        <name lang="ar">Hosts</name>
+                        <name lang="ru">Hosts</name>
+                    </names>
+                    <element name="client-4.elmt">
+                        <definition link_type="simple" hotspot_x="15" hotspot_y="21" type="element" orientation="dyyy" version="0.70" width="30" height="60">
+                            <uuid uuid="{34bf7fe6-641c-4948-a223-9c306e3b865b}"/>
+                            <names>
+                                <name lang="en">printer</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <line y2="30" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="20" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="20" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-10" end2="none" y1="-15" x2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="20" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-10" end2="none" y1="20" x2="10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="-5" antialias="false" length1="1.5" end1="none" length2="1.5" x1="10" end2="none" y1="20" x2="10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="-15" antialias="false" length1="1.5" end1="none" length2="1.5" x1="10" end2="none" y1="-5" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="-15" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="-15" x2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="-4" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" x="12" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{7c7f6433-32e8-4dec-899c-20a4f2eda38f}" z="7">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <line y2="-5" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="-15" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="-5" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="-5" x2="10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <text text="A4" y="10" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-8" rotation="0" color="#000000"/>
+                                <terminal y="30" x="0" orientation="s"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="client-5.elmt">
+                        <definition link_type="simple" hotspot_x="20" hotspot_y="34" type="element" orientation="dyyy" version="0.70" width="40" height="70">
+                            <uuid uuid="{58bbf6e3-7551-4d68-9cc7-eaec918f37f8}"/>
+                            <names>
+                                <name lang="en">server</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <line y2="30" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="20" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0"/>
+                                <rect antialias="false" rx="0" y="-30" x="-15" width="30" height="50" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="15" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-5" end2="none" y1="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-5"/>
+                                <line y2="15" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0"/>
+                                <line y2="15" antialias="false" length1="1.5" end1="none" length2="1.5" x1="5" end2="none" y1="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="5"/>
+                                <rect antialias="false" rx="0" y="-25" x="-10" width="20" height="10" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="-2" x="20" Valignment="AlignVCenter" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" z="7" uuid="{7c7f6433-32e8-4dec-899c-20a4f2eda38f}">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <line y2="-10" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-10" end2="none" y1="15" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-10"/>
+                                <line y2="-10" antialias="false" length1="1.5" end1="none" length2="1.5" x1="10" end2="none" y1="15" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="10"/>
+                                <terminal y="30" x="0" orientation="s"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="client-1.elmt">
+                        <definition link_type="simple" hotspot_x="25" hotspot_y="13" type="element" orientation="dyyy" version="0.70" width="50" height="40">
+                            <uuid uuid="{d2856ebb-565a-48d2-80f4-b0147d9b0087}"/>
+                            <names>
+                                <name lang="en">raspberry</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <dynamic_text text_width="-1" y="5" x="15" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignBottom" frame="false" Halignment="AlignLeft" rotation="0" text_from="ElementInfo" uuid="{1a273931-5989-4980-8d45-62f16e9b2d7a}" z="1">
+                                    <text/>
+                                    <info_name>description</info_name>
+                                </dynamic_text>
+                                <line y2="20" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="10" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <text text="Pi" y="5" x="-5" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rotation="0" color="#000000"/>
+                                <rect antialias="false" rx="0" y="-10" x="-20" width="40" height="20" style="line-style:normal;line-weight:normal;filling:none;color:black" ry="0"/>
+                                <terminal y="20" x="0" orientation="s"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="client-3.elmt">
+                        <definition link_type="simple" hotspot_x="35" hotspot_y="24" type="element" orientation="dyyy" version="0.70" width="70" height="60">
+                            <uuid uuid="{527b7604-d822-4a3e-9ea1-446b2506cdd3}"/>
+                            <names>
+                                <name lang="en">client</name>
+                            </names>
+                            <elementInformations/>
+                            <informations/>
+                            <description>
+                                <line y2="30" antialias="false" length1="1.5" end1="none" length2="1.5" x1="0" end2="none" y1="20" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <rect antialias="false" rx="0" y="-20" x="-30" width="60" height="40" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="25" antialias="false" length1="1.5" end1="none" length2="1.5" x1="-15" end2="none" y1="25" x2="15" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="-13" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Valignment="AlignBottom" x="-4" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{7c7f6433-32e8-4dec-899c-20a4f2eda38f}" z="7">
+                                    <text/>
+                                    <info_name>function</info_name>
+                                </dynamic_text>
+                                <terminal y="30" x="0" orientation="s"/>
+                            </description>
+                        </definition>
+                    </element>
+                    <element name="client-2.elmt">
+                        <definition link_type="simple" hotspot_x="35" hotspot_y="17" type="element" orientation="dyyy" version="0.70" width="60" height="40">
+                            <uuid uuid="{fb2e7187-9fe0-4902-8fbb-22ed7d58c344}"/>
+                            <names>
+                                <name lang="en">notebook</name>
+                            </names>
+                            <elementInformations>
+                                <elementInformation show="1" name="designation"/>
+                                <elementInformation show="1" name="description"/>
+                                <elementInformation show="1" name="manufacturer-reference"/>
+                                <elementInformation show="1" name="supplier"/>
+                                <elementInformation show="1" name="plant"/>
+                                <elementInformation show="1" name="unity"/>
+                                <elementInformation show="1" name="manufacturer"/>
+                                <elementInformation show="1" name="comment"/>
+                                <elementInformation show="1" name="label"/>
+                                <elementInformation show="1" name="quantity"/>
+                                <elementInformation show="1" name="machine-manufacturer-reference"/>
+                            </elementInformations>
+                            <informations/>
+                            <description>
+                                <line y2="15" antialias="false" length1="1.5" length2="1.5" end1="none" x1="-20" end2="none" y1="15" x2="10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="17" antialias="false" length1="1.5" length2="1.5" end1="none" x1="-22" end2="none" y1="17" x2="8" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <rect antialias="false" rx="0" y="-15" x="-20" width="40" height="25" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                                <line y2="20" antialias="false" length1="1.5" length2="1.5" end1="none" x1="-20" end2="none" y1="10" x2="-30" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+                                <line y2="20" antialias="false" length1="1.5" length2="1.5" end1="none" x1="-30" end2="none" y1="20" x2="10" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+                                <line y2="10" antialias="false" length1="1.5" length2="1.5" end1="none" x1="10" end2="none" y1="20" x2="20" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+                                <dynamic_text text_width="-1" y="-13" x="-4" Valignment="AlignBottom" font="Sans Serif,7,-1,5,0,0,0,0,0,0,normal" frame="false" Halignment="AlignHCenter" rotation="0" text_from="ElementInfo" uuid="{7c7f6433-32e8-4dec-899c-20a4f2eda38f}" z="7">
+                                    <text/>
+                                    <info_name>function</info_name>
+                                </dynamic_text>
+                                <line y2="13" antialias="false" length1="1.5" length2="1.5" end1="none" x1="-18" end2="none" y1="13" x2="12" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+                            </description>
+                        </definition>
+                    </element>
+                </category>
+            </category>
+        </category>
+    </collection>
+</project>
