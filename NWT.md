@@ -49,3 +49,9 @@ IP-Adresse und Subnetzmaske werden in Binär logisch addiert und resultierend is
 | 1+1=1      | 11000000                          | 10101000 | 00000000 |          |
 | Netzwerk   | 192                               | 168      | 0        | 0        |
 | Hosts      | $2⁸$ = 256 &rarr; (0..255) 1..254 |          |          |          |
+
+unternehmen 2 standorte je eine öffentliche ip adresse nur 2 adressen 256 andere adressen verschwendet
+
+desswegen netzwerk segmente
+
+abschotten von wichtigen bereichen
