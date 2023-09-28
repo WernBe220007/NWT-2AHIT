@@ -49,3 +49,37 @@ IP-Adresse und Subnetzmaske werden in Binär logisch addiert und resultierend is
 | 1+1=1      | 11000000                          | 10101000 | 00000000 |          |
 | Netzwerk   | 192                               | 168      | 0        | 0        |
 | Hosts      | $2⁸$ = 256 &rarr; (0..255) 1..254 |          |          |          |
+
+BSPB:
+
+| Klasse C:    | 192.12.50.0/24  |
+| ------------ | --------------- |
+| Netzmaske:   | 255.255.255.0   |
+| Netzadresse: | 192.12.50.0     |
+| Gateway:     | 192.12.50.1     |
+| IP-Adressen: | 192.12.50.2-254 |
+| BC-Adresse:  | 192.12.50.255   |
+
+1. Teilnetz
+   
+   | Netzwerkadresse: | 192.12.50.0     |
+   | ---------------- | --------------- |
+   | Subnetzmaske:    | 255.255.255.128 |
+   | Gateway:         | 192.12.50.1     |
+   | IP-Adressen:     | 192.12.50.2-126 |
+   | BC-Adresse:      | 192.12.50.127   |
+
+2. Teilnetz
+
+| Netzwerkadresse: | 192.12.50.128     |
+| ---------------- | ----------------- |
+| Subnetzmaske:    | 255.255.255.128   |
+| Gateway:         | 192.12.50.129     |
+| IP-Adressen:     | 192.12.50.130-254 |
+| BC-Adresse:      | 192.12.50.255     |
+
+- Subnetze verrringert die Anzahl von zuordnungsfähigen Hostadressen (-3 Adressen)
+
+- Alle Rechner eines Netzwerksegmentes müssen dessen Subnetzmaske verwenden
+
+- Übergeordnete Netze sehen diese Adressen als ganz normale IP-Adressen
