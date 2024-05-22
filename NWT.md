@@ -479,4 +479,192 @@ Whois ist ein Protokoll, mit dem Informationen zu Domains, deren IP-Adressen und
 
 3. Iterativ - der Nameserver antwortet mit einem Verweis auf einen anderen Nameserver
 
+#### Forward-Lookup
+
+Den Vorgang der Auflösung von IP-Adressen aus bekannten Namen, nennt man den Forward-Lookip. Das DNS teilt die Namensdomänen in sogenannte delegierte Namenszonen ein. Eine Zone ist also definiert durch den Namensraum, der von einem Nameserver verwaltet wird. Sie kann dabei mehrere Hierarchien umfassen. Die gesamte Informationen zur Auflösung von Adressen aus Namen werden in der Forward-Lookup Zone eines Nameservers geführt. Die Namensdomänen werden durch die Punkte im Namen getrennt, die Zonen durch die Verwaltungsbereiche der Nameserver. Durch eine hier rekursive Abfrage in der Hierarchie kann die IP-Adresse eines Hosts gefunden werden.
+
+#### Reverse-Lookup
+
+Die Auflösung eines Namens aus einer IP-Adresse nennt man Reverse-Lookup, die zuständige Namenszone ist die Reverse-Lookup Zone. Wer welche Namen hat, ist ja registriert. Wer welche IP-Adressen besitzt, natürlich ebenfalls. Damit wird ein Namensraum aufgespannt, der genug Platz für alle möglichen IP-Adressen bietet. Im Bereich der IPv4-Adressen gibt es grundsätzlich 4294967296 minus der privaten und reservierten IP-Adressen. Durch eine hier rekursieve Abfrage in der Hierarchie kann der Name eines Hosts gefunden werden.
+
+Diese Namensauflösung gilt wie zu Beginn dargestellt nur für globale Namensräume. Alles lokale innerhalb eines LANs ist davon nicht betroffen. Dort gibt es nur private IP-Adressen und dazu auch nur private Namen. Deshalb sind private und öffentliche Adressen streng ausseinander zu halten. Im privaten LAN findet man daher auch private DNS für eigene Zwecke.
+
+#### DNS- Records
+
+Durch spezielle Einträge in den Nameservern werden nicht nur Adressen und Namen von Hosts, sondern zB. auch von Mail- Domains geführt. Damit kann auch E-Mail weltweit zugestellt werden. Im folgenden werden die wichtigsten Einträge im DNS beschrieben. Jeder Eintrag besteht aus verschiedenen Typen. Ein Record Typ bestimmt, welche Art von Information er beinhaltet. Das DNS kennt über 100 verschiedene Typen.
+
+- A (Address) In diesem Datenfeld befindet sich die IPv4 Adresse
+
+- AAAA (Address) In diesem Datenfeld befindet sich die IPv6 Adresse
+
+- CNAME (Canonical Name) Hier findet man den wirklichen Namen einer Domain. Mit ihm ist die IP-Adresse verbunden.
+
+- MX (Mail Exchange) Hier werden ein oder mehrere E-Mail-Server definiert, die zu einer Domain gehören
+
+- NS (Nameserver) Der Eintrag gibt an, welcher DNS-Server für diese Domäne autorisierend ist.
+
+- PTR (Pointer) Dieser Typ enthält einen Zeiger für den Reverse-Lookup. Welcher Hostname gehört also zu einer bestimmten IP-Adresse.
+
+- TXT (Text) Er enthält einen beliebeigen Text als zusätzliche Information für eine Abfrage zu einer Domain.
+
+- SOA (Start of Authority) Enthät Informationen über die Zone die von Diesem DNS Server organisiert wird.
+
+In der Zonendatei sind alle DNS-Records aufgelistet. Damit die Daten korrekt verarbeitet werden können, müssen bestimmte Vorgaben streng eingehalten werden. Ansonsten kann das DNS nicht funktionieren. Zonendateien werden für jeden Namensraum angelegt und müssen immer aktuell gehalten werden. Nameserver können grundsätzlich redundant betrieben werden.
+
 ### Lokal
+
+Für die Nutzung der unterschiedlichen Dienste und die Konfiguration eines Rechners in einem TCP/IP-Netzwerk wird eine Reihe von Konfigurationsdateien genutzt. Auf jeden Rechner finden sich nach der Einrichtung von TCP/IP vier Dateien:
+
+- Hosts
+
+- Networks
+
+- Services
+
+- Protocols
+
+Der Aufbau der Dateien ist bei allen IP-fähigen Betriebsystemen gleich.
+
+Hier sind die Begriffe "lokal" und "global" streng auseinander zu halten.
+
+Lokale Namensauflösung passiert einerseits lokal am Host aber auch lokal im LAN.
+
+Globale Namensauflösung findet im internationalen Domain Name System statt.
+
+Im gesamten Prozess einer Namensauflösung wird die Suche immer zuerst bei sich selbst begonnen. Jeder Host hat dazu eine sehr umfangreiches System an Funktionen installiert, dass immer in einer vorkonfigurierten Reihenfolge abgearbeitet wird. Dieses System nennt man den Resolver. Es stellt de facto den DNS-Client dar. Der Begriff Resolver bezieht sich nicht auf eine spezielle Applikation, sondern auf eine Sammlung von Programmen und C-Funktionen. Die Resolver-Funktionen lesen die Konfigurationsdateien in vorgegebener Reihenfolge.
+
+#### Spezielle Mechanismen unter Linux
+
+Die Konfiguration der Namensaufösung erfolgt unter Linux ausgehend von 2 zentralen Dateien.
+
+- Die älteren C-Bibliotheken benutzen die Datei `/etc/host.conf`
+
+- Die jüngeren GNU-Bibliotheken beutzen die Datei `/etc/nsswitch.conf`
+
+Beide Mechanismen exestieren nebeneinanden. Die Steuerdazei `/etc/host.conf` teilt den Resolver-Funktionen mit, welche Dienste in welcher Reihenfolge benutzt werden sollen. Zumeist findet man die folgenden Einstellungen:
+
+```bash
+order hosts, bind
+multi on
+```
+
+Die Parameter `multi on` legt dabei fest, dass in der Datei `/etc/hosts` mehrere Adressen stehen dürfen. Hier kann man (lokal oder am Nameserver) alle lokalen Server eines LANs eintragen, die in keinem DNS aufscheinen.
+
+Die neuere GNU-St andardbibliothek zeichnet sich durch ein mächtiges und flexibles Konzept aus, das den älteren Mechanismus erweitert. Diese Mechanis,em werdem om der Steuerdatei `/etc/nsswitch.conf` angegeben. Jede Zeile dient einem bestimmten Dienst. Die Zeile mit der Auflösung von Hostadressen beginnt mit `hosts`, jene für die Auflösung von Netzwerknamen mit `networks`.  Jede Zeile enthält Optionen, die Art und Reihenfolge der betreffenden Datenquellen festlegen.
+
+```bash
+hosts: files mdns4_minimal dns myhostname mymachine
+networks: files
+```
+
+Dabei bedeuten die dargestellten Parameter:
+
+- files &rarr; Durchsucht eine lokale Datei nach Host oder Netznamen und ihre zugehörigen IP_Adressem. Diese option verwendet die traditionellen Dateien `/etc/hosts` und `/etc/networks` 
+
+- mdns4_minimal &rarr; Sucht IPv4-Adressen über Multicast-Verfahren nur für Hostnamen die auf `.local` enden.
+
+- dns &rarr; Verwendet das Domain Name System zur Auflösung der Adressen. Der Mechanismus verweist auf die Datei `/etc/resolv.conf`
+
+- myhostname &rarr; Dies ist der unter `127.0.1.1` eingetragene eigene Hostname
+
+Vorsicht: Der Hostname in `/etc/hosts` (`127.0.1.1`) darf dort aber niemal geändert werden. Er ist auch an anderen Stellen vermerkt und wird so nicht mitverändert.
+
+#### Konfiguration des Resolvers
+
+Wenn Sie die Resolver-Bibliothek so konfigurieren, dass sie zur Ermittlung von Hostadressen den BIND-Namensdienst verwendet (dns), müssen Sie ihr auch mitteilen, welche Server sie benutzen soll. Dafür gibt es eine seperate Datei namens `/etc/resolv.conf`. Fehlt diese Datei oder ist sie leer, nimmt der Resolver an, dass sich der Nameserver auf dem Host selber befindet.
+
+- search &rarr; Mit der Option werden Suchlisten angegeben, deren Einträge der Reihe nach duchprobiert werden, bis ein gültiger DNS-Eintrag gefunden wird.
+
+- nameserver &rarr; Gibt die Adresse eines übergeordneten Nameserver an. Wenn Sie keinen Name-Server eintragen, nimmt der Resolver an, dass einer auf der lokalen Maschine läuft.
+
+Unter Debian /und seinen Derivaten) ist systemd-resolved jener Dienst, der die Namensauflösung für unterschiedliche Aufragen übernimmt. Seine grundlegende Konfiguration erfolgt in `/etc/systemd/resolved.conf`. Will man einem einzelnen Host (zB. einem Nameserver im LAN) erweiterte Möglichkeiten zur Namensauflösung bieten, ist eine entsprechende Konfiguration des Dienstes in dieser Datei erforderlich.
+
+Mit dieser Datei kann man auch das Verhalten der lokalen Namensauflösung stark beeinflussen. Es finden sich in dieser Kofigurationsdatei auch alle notwendigen Parameter (voreingestellt dargestellt). Normalerweise wird man diese Konfigurationsmöglichkeiten aber nur auf dem Nameserver im eigenem LAN nutzen. Die DNS werden den Hosts im LAN wie üblich über den DHCP-Server bekannt gemacht. Wird dort der lokale Nameserver als erster angegeben, kommen alle Anfragen zur Namensauflösung der Hosts im LAN nun an diesen. Er übernimmt die Auflösung oder wird sie weiterleiten an seine öffentlichen DNS. Da systemd-resolved augenscheinlich ein sehr kompliziertes Konstrukt darstellt, soll die folgende Abbildung einen Überblick ermöglichen. Sie zeigt das Zusammenspiel des Resolvers mit seinen Konfigurationsdateien.
+
+Man stelle sich vor jemand gibt im Terminal ein:
+
+`ping www.litec.ac.at`
+
+Dies wird unweigerlich zu einer Kettenreaktion im OS führen - die Namensauflösung beginnt.
+
+Anwendungen können bei Bedarf ihre Anfragen zur Namensauflösung über 3 Schnittstellen einreichen:
+
+- Über eine Programm-API
+
+- Über ein glibc-Modul
+
+- An den lokalen Resolver
+
+Der Resolver (systemd-resolved) kennt jetzt grundsätzlich 3(+1)
+
+Möglichkeiten Namensauflösung zu betreiben. Wie oberhalb ersichtlich sind dies:
+
+- Lokale Suche (files)
+
+- mDNS, LLMNR (Auflösung über Multicast im LAN)
+
+- Nameserver des DNS fragen (globale Auflösung)
+
+- Eigener Hostname?
+
+#### mDNS
+
+Multicast-Namensauflösung ist für viele Anwendungen notwnedig, die keine DNS-Anfrage durchführen. Dies sind zB. Messanger, VoIP, Multimedia, etc. mDNS basiert auf dem Zeroconf Protokoll (ursprünglich von Apple). mDNS legt fest, dass die Domain .local nur lokal gilt! Alle Anfragen für Namen die auf .local enden müssen über Multicasts an die mDNS-Multicast-Adresse 244.0.0.251 (Port 5353) gesendet werden. Man kann in der Konfigration auch globale DNS angeben sowie eigene Hostnames vergeben.
+
+#### LLMNR
+
+Link Local Multicast Name Resolution ist ein Protokoll das ebenfalls die Namensauflösung für Hosts im selben LAN erlaubt. Unter Linux ist es ebenfalls im DIenst systemd-resolved implementiert. Unter IPv4 arbeitet LLMNR paralell zu NetBIOS und ersetzt NetBIOS unter IPv6 völlig. LLMNR und mDNS existieren seit Windows Vista auch in MS Windows.
+
+#### Spezielle Mechanismen unter MS Windows
+
+Auch unter MS Windows gibt es unterschiedliche Verfahren zur Namensauflösung, die sich mit den Versionen auch verändert haben. Es kommen aber auch hier immer mehrere Verfahren zum Einsatz, die in einer bestimmten Reihenfolge durchgeführt werden, bis eine gültige Antwort liefert. Sie kann beispielsweise so ablaufen:
+
+- Hosts &rarr; Lokale Deti hosts wird durchsucht
+
+- DNS-Abfrage &rarr; Anfrage an einen DNS-Server wird gesendet
+
+- WINS-Abfrage &rarr; Anfrage an WINS Samba server
+
+- NetBIOS-Cache &rarr; Lokaler Zwischenspeicher wird befragt
+
+- Broadcast &rarr; NetBIOS-Broadcast wird ausgesendet
+
+- Lmhosts.sam &rarr; Lokale Datei lmhosts.sam wird durchsucht
+
+#### Network Basic Input/Output System
+
+NetBIOS ist eine Schnittstelle für Anwendungen im Windows-basierten Netzwerk. NetBIOS ist ein Diesnt zur Auflösung der sogenannten NetBIOS-Namen (spezielle Namen bis max. 15+1 Zeichen). NetBIOS dient der lokalen Kommunikation in kleinen Netzwerken. Später wurde daraus NET-BEUI, ein Protokoll ohne Routing-Funktionen für kleine Netzwerke. Der Dienst kommuniziert über Port 137-139/udp.
+
+#### Windows Internet Name Service
+
+WINS ist ein spezielles System zur Namensauflösung unter WIndows, basierend auf dem Dienst NetBIOS. Anders als der Name vermuten lässt, wird WINS nur im LAN Verwendet. WINS wurde eingeführt um die NetBIOS-Rundsprüche zu reduzieren. Findet die Suche über den eigenen Resolver keine IP-Adresse, wird noch der WINS-Server befragt. Der WINS-Namensraum ist leider völlig unstrukturiert und daher nicht systematisch verwendbar. Microsoft empfiehlt zukünftig auf NetBIOS und WINS-Server zu verzichten und ausschließlich DNS zur Namensauflösung einzustellen.
+
+#### Lmhosts.sam
+
+Findet keine der vorherigen Dienste den gesuchten Computernamen (und seine IP-Adresse), wird die lokale Datei lmhosts.sam befragt. In dieser Datei sind speziell die für Windows-Netzwerke wichtigen NetBIOS-Namen für die Namensauflösung enthalten. Die Datei wird ansonsten gleich der Datei hosts verwendet. Die Datei liegt im Verzeichnis `C:\Windows\System32\drivers\etc`. Die Namensregeln für NetBIOS-Namen werden folgenden erklärt.
+
+#### Namesregeln
+
+Obwohl es genaue Regeln gibt, unterstützen manche Programme davon abweichende Zeichen und Längen. Wir halten uns aus Kompatiblitätsgründen an die Beschränkungen!
+
+- Der Domainname ist ein weltweit einmaliger Name unterhlab einer TLD-Domain. Die exakten Regeln für die Namensvergabe legt die Vergabestelle der jeweiligen TLD fest. Einer Domain können, jeweils mit einem Punkt abgetrennt, weiter Subdomains hinzugefügt werden. Jeder Abschnitt darf maximal 63 Zeichen enthalten (keine Leerzeichen). Die Gesamtlänge des FQDN (Fully Qualified Domain Names) darf max 255 Zeichen sein (mit den Punkten).
+
+- Hostnames dürfen nur aus den ASCII-Zeichen A-Z (non Case sensitive), den Ziffern 0-9 und dem Bindestrich bestehen. Die Länge darf grundsätzlich max. 255 Zeichen sein. Man sollte aber max 15 Zeichen verwenden (Samba).
+
+- NetBIOS-Namen sind immer 16-Zeichen lang. Unter Windows dürfen Sie aber nur die ersten 15-Zeichen für einen Computer verwenden. Das 16. Zeichen benutzt Windows, um den Typ festzulegen (U...Hostname, G...Domainname).
+
+- Für Samba dürfen Rechnernamen nicht länger als 15 Zeichen sein (gilt auch für Linux)
+
+Grundsätzlich gilt folgende Regel: Verwenden sie keine Keerzeichen sowie Ländercode-typischen Zeichen (öäü,...), auch nicht für Hostnamen und Dateinamen. Verwenden sie niemals local oder localhost. Punkte trennen nur Subdomain sowie Name und Erweiterung.
+
+#### Zeroconf-Verfahren
+
+Das Zusammenspiel von Link-Local-Adressen, mDNS und Service Discovery wurde unter dem Namen Zeroconf Networking spezifiziert. Dessen Umsetzung durch Apple heißt Bonjur (Anfangs Rendezvous), die Open-Source-Implementierung dazu nennt sich Avahi und ist unter Linux in Verwendung. Bonjur und Avahi sind selnstkonfigurierende Verfahren für Adhoc-Netze auf Basis von IPv4 und IPv6. Im Prinzip handelt es sich um eine Sammlung bereits bestehender Protokolle ume Netzwerkdiense, die in einem IP-Netz bereitgestellt werden, automatisch erkennen zu können. Der Anwender muss nichts manuell konfigurieren. Somit ist Bonjur auch im Embedded oder IoT-Bereich sehr interessant, wenn man Sensoren und Aktoren sich automatisch vernetzen. Bonjur löst verschiedene Aufgaben, die in lokalen Netzwerken anfallen:
+
+- IP-Adressen zuweisen
+
+- Namensauflösung
+
+- Dienste bekannt machen
+
+Bei Bonjur teilen die Clients ihre Dienste von sich aus mit, so dass sie von anderen Stationen automatisch gefunden werden können. Die Dienste melden sich dynmaisch an und ab. Bonjur nutzt zum Informationsaustausch lediglich Multicast-DNS Pakete. Die Clients tauschen die Infomrationen über die Adresse 244.0.0.251 am Port 5353 aus. Diese Pakete bleiben dabei im Subnetz. IP-Pakete aus dem Adressbereich ziwschen 224.0.0.0 bis 224.0.0.255 dürfen von IP-Routern nicht über das eigene Subnetz hinaus übertragen werden.
