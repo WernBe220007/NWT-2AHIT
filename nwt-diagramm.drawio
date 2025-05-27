@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.2.4">
+  <diagram name="Seite-1" id="OEftalm2bPisoppm1ala">
+    <mxGraphModel dx="1428" dy="1916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zgNc5YV300J8xzFRSmFN-9" value="a0:d3:c1:4d:55:ac" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="320" y="120" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-10" value="a0:d3:c1:4e:87:40" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="320" y="-40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-11" value="34:64:a9:18:c9:96" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="320" y="280" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-12" value="a0:d3:c1:4e:8d:4f" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="320" y="440" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-13" value="34:64:a9:18:c9:39" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="320" y="600" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-14" value="a0:d3:c1:4d:55:b4" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="320" y="760" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-15" value="34:64:a9:18:c9:8f" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry y="120" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-16" value="34:64:a9:18:cb:b0" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry y="-40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-17" value="34:64:a9:32:40:bb" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry y="280" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-18" value="a0:d3:c1:4e:91:72" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry y="440" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-19" value="34:64:a9:18:cb:4a" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry y="600" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zgNc5YV300J8xzFRSmFN-20" value="a0:d3:c1:4e:87:43" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry y="760" width="120" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

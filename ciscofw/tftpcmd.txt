@@ -1,0 +1,1 @@
+sudo uftpd -n -o ftp=0,tftp=69 /home/benedikt/Downloads/ciscofw/
